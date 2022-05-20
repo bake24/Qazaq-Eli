@@ -50,6 +50,8 @@ class Famous(models.Model):
     def __str__(self):
        return self.city_name
 
+    #dwqwdqwd#
+
 
     class Meta:
          verbose_name = "Танымал адамдар"
