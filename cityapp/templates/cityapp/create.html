@@ -1,0 +1,38 @@
+{% extends 'cityapp/layout.html' %}
+
+{% block title %}Registration Form{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Registration Form</h1>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{ form.name }}<br>
+            {{ form.surname }}<br>
+            {{ form.country }}<br>
+            {{ form.desired_city }}<br>
+            {{ form.desired_place }}<br>
+            {{ form.date }}<br>
+            {{ form.card_num }}<br>
+            {{ form.email }}<br>
+            {{ form.image }}<br>
+            <span>{{ err }}</span>
+<!--            <input type = "text" placeholder="Name" class = "form-control"><br>-->
+<!--            <input type = "text" placeholder="Surname" class = "form-control"><br>-->
+<!--            <input type = "text" placeholder="Your Country" class = "form-control"><br>-->
+<!--            <input type = "text" placeholder="Desired City" class = "form-control"><br>-->
+<!--            <input type = "text" placeholder="Desired Place" class = "form-control"><br>-->
+<!--            <input type = "date" placeholder="Date" class = "form-control"><br>-->
+<!--            <input type = "text" placeholder="Num of card" class = "form-control" maxlength="12"><br>-->
+            <button class="btn btn-success" type="submit">Registrate</button>
+
+
+
+        </form>
+
+
+
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'cityapp/layout.html' %}
+
+{% block title %}Famous Person{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Famous Persons</h1>
+        <p>Maybe You know:</p>
+
+        {% for el in famous %}
+             <div class="alert alert-warning mt-2">
+                 <h3>{{ el.city_name }}</h3>
+                 <p>{{ el.pers1 }}</p>
+                 <p>{{ el.pers2 }}</p>
+                 <p>{{ el.pers3 }}</p>
+                 <a href="{% url 'news-detail'  el.id %}" class="btn btn-warning">More Information</a>
+             </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}

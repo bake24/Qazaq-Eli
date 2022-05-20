@@ -1,0 +1,21 @@
+{% extends 'cityapp/layout.html' %}
+
+{% block title %}Contacts{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Contacs</h1>
+        <p>Message Us</p>
+        {% for el in contact %}
+
+            <div class="alert alert-info mt-2">
+                <h1>{{ el.name }}</h1>
+                <h1>{{ el.county }}</h1>
+                <h4>{{ el.telnumber }}</h4>
+            </div>
+
+        {% endfor %}
+        <button class="btn btn-warning">TAP</button>
+
+    </div>
+{% endblock %}

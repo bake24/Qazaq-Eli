@@ -1,0 +1,13 @@
+{% extends 'cityapp/layout.html' %}
+{% load cityapp_tags %}
+
+{% block title %}ТОП-5{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1 style="font-size: 70px">Megapolices:</h1>
+        <p>TOP-4</p>
+        {% show_categories 'title' cat_selected %}
+
+    </div>
+{% endblock %}

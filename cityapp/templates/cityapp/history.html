@@ -1,0 +1,20 @@
+{% extends 'cityapp/layout.html' %}
+
+{% block title %}History{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1 style="font-size: 70px">History of cities</h1>
+        <p>TOP-4</p>
+
+        {% for el in history %}
+
+            <div class="alert alert-success mt-2">
+                <h2>{{ el.title }}</h2>
+                <h4>{{ el.est }}</h4>
+                <p>{{ el.description }}</p>
+            </div>
+
+        {% endfor %}
+    </div>
+{% endblock %}
