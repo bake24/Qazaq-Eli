@@ -9,6 +9,82 @@ from django.core.mail import EmailMessage
 from django.shortcuts import render, redirect
 from django.conf import settings
 from django.template import RequestContext
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import LoginView
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
+from django.urls import reverse_lazy
+from .forms import UserUpdateForm, ProfileUpdateForm, UserRegisterForm
+from django.contrib.auth.decorators import login_required
+from .models import Profile
+
+
+class CustomLoginView(LoginView):
+    template_name = 'cityapp/login.html'
+    fields = '__all__'
+    redirect_authenticated_user = True
+
+    def get_success_url(self):
+        return reverse_lazy('main')
+
+
+class RegisterPage(FormView):
+    template_name = 'cityapp/register.html'
+    form_class = UserCreationForm
+    redirect_authenticated_user = True
+    success_url = reverse_lazy('main')
+
+    def form_valid(self, form):
+        user = form.save()
+        if user is not None:
+            login(self.request, user)
+        return super(RegisterPage, self).form_valid(form)
+
+    def get(self, *args, **kwargs):
+        if self.request.user.is_authenticated:
+            return redirect('main')
+        return super(RegisterPage, self).get(*args, **kwargs)
+
+
+def register(request):
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Your account has been created! You are now able to log in')
+            return redirect('login')
+    else:
+        form = UserRegisterForm()
+    return render(request, 'cityapp/register.html', {'form': form})
+
+
+@login_required(login_url="/login/")
+def profile(request):
+    Profile.objects.get_or_create(user=request.user)
+    if request.method == 'POST':
+        u_form = UserUpdateForm(request.POST, instance=request.user)
+        p_form = ProfileUpdateForm(request.POST,
+                                   request.FILES,
+                                   instance=request.user.profile)
+        if u_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            p_form.save()
+            messages.success(request, f'Your account has been updated!')
+            return redirect('profile')
+
+    else:
+        u_form = UserUpdateForm(instance=request.user)
+        p_form = ProfileUpdateForm(instance=request.user.profile)
+
+    context = {
+        'u_form': u_form,
+        'p_form': p_form
+    }
+
+    return render(request, 'cityapp/profile.html', context)
 
 
 
@@ -22,7 +98,7 @@ class NewDetailView(DetailView):
 # class NewUpdateView(UpdateView):
 #     model = Famous
 
-
+@login_required(login_url="/login/")
 def index(request):
     return render(request, 'cityapp/index.html')
 
