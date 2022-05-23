@@ -1,0 +1,244 @@
+{% block content %}
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="{% url 'places' %}" class="w3-bar-item w3-button w3-padding-large w3-white">RETURN</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="w3-container w3-red w3-center" style="padding:40px">
+    <h1 class="w3-margin w3-jumbo">WHERE TO GO</h1>
+  </header>
+
+  <!-- First Grid -->
+  <div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Mausoleum of Khoja Ahmed Yasawi</h1>
+        <h5 class="w3-padding-32">The Mausoleum of Khoja Ahmed Yasawi, in the town of Yasi, now Turkestan, was built at the time of Timur (Tamerlane), from 1389 to 1405. In this partly unfinished building, Persian master builders experimented with architectural and structural solutions later used in the construction of Samarkand, the capital of the Timurid Empire. Today, it is one of the largest and best-preserved constructions of the Timurid period.</h5>
+
+        <p class="w3-text-grey">The Mausoleum of Khoja Ahmed Yaswi, a distinguished Sufi master of the 12th century, is situated in southern Kazakhstan, in the north-eastern section of the city of Turkestan (Yasi). Built between 1389 and 1405, by order of Timur (Tamerlane), the ruler of Central Asia, it replaced a smaller 12th century mausoleum. Construction of the building was halted in 1405, with the death of Timur, and was never completed. The property (0.55 ha) is limited to the mausoleum, which stands within a former citadel and the archaeological area of the medieval town of Yasi; the latter serves as the buffer zone (79.36 ha) for the property.</p>
+      </div>
+
+      <div class="w3-third w3-center">
+        <img src="https://whc.unesco.org/uploads/thumbs/site_1103_0005-1000-750-20130916120224.jpg" style="width: 300px; height: 300px; margin: 50px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Grid -->
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <img src="https://exp.cdn-hotels.com/hotels/69000000/68610000/68602600/68602572/31c07090_z.jpg?impolicy=fcrop&w=773&h=530&q=high" style="width: 300px; height: 300px; margin-right: 50px; margin-top:50px;">
+      </div>
+      <div class="w3-twothird" >
+        <h1>Karavan Saray</h1>
+        <h5 class="w3-padding-32">Caravanserai - an inn for caravans on the trade route, a rest house; as well as "khan" (from Persian خان‎ [xān], whence also Ottoman. خان‎ [han]), Arabic. فندق‎ [funduq] and "fundaco" in Venice), Caravanserai [1] - a large public building in the Near and Middle East and Central Asia, in cities, on roads and in uninhabited places, serving as shelter and parking for travelers, as a rule - for trade caravans.</h5>
+
+        <p class="w3-text-grey">There are two types of caravanserai: open and closed. The closed view was mainly built along the caravan routes, although such a view was often found in cities. The walls provided an opportunity to repel an attack and withstand a short siege. It has a square or rectangular structure, mostly with an open yard and a well in the middle of the yard. Inside were rooms for living and storage rooms for goods. Without fail there was a corral for pack animals. There were one- and two-story caravanserais. In the two-story buildings, living quarters were located on the second floor, and warehouses and pens for animals were located on the first floor.</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- First Grid -->
+  <div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Altyn Samruk</h1>
+        <h5 class="w3-padding-32">The flying theater "Altyn Samruk" is a media complex located on the territory of the Karavansaray complex in Turkestan, which has no analogues in Central Asia. There are 20 "flying theaters" in the world and one of them is now in Kazakhstan!</h5>
+
+        <p class="w3-text-grey">The guests of the "flying theater" will go on a journey through time and space with the mythical bird Samruk to the origins of Kazakh culture. The effect of immersion in 8D format will take you on a fantastic flight over the sights of Kazakhstan! The ideological basis of this project was the ancient Kazakh legend about the sacred bird Samruk, laying eggs on the crown of the tree of the universe, which is why the shape of the complex itself is made in the form of a nest with a golden egg.</p>
+      </div>
+
+      <div class="w3-third w3-center">
+        <img src="https://ticketon.kz/files/media/24094u45664_letayushchiy-teatr-altyn-samruk-8.jpg" style="width: 300px; height: 300px; margin: 50px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Grid -->
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Central_Downtown_Astana_2.jpg/1024px-Central_Downtown_Astana_2.jpg" style="width: 300px; height: 300px; margin-right: 50px; margin-top:50px;">
+      </div>
+      <div class="w3-twothird" >
+        <h1>Baiterek</h1>
+        <h5 class="w3-padding-32">Baiterek (Kazakh: Бәйтерек, romanized: Bäiterek; "tall poplar tree") is a monument and observation tower in Nur-Sultan, the capital city of Kazakhstan. A tourist attraction popular with foreign visitors and Kazakhstanis, it is emblematic of the city, which became capital of the country in 1997. The tower is located on Nurjol Boulevard, and is considered a symbol of post-independence Kazakhstan.</h5>
+
+        <p class="w3-text-grey">The significance of "Baiterek" as a symbol of a new stage in the life of the Kazakh people is emphasized by the artistic composition "Ayaly alakan" (Kazakh: Аялы алақан - "caring hands") with an imprint of the president's right hand, located at a height of 97 meters, which symbolizes 1997 - the year of the proclamation Astana as the new capital of the state and, accordingly, a new starting point in the history of the country.</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- First Grid -->
+  <div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Khan Shatyr</h1>
+        <h5 class="w3-padding-32">Khan Shatyr (Kazakh: Хан Шатыр, romanized: Han Şatyr, lit. 'Royal Marquee') is a transparent tent located in Nur-Sultan, the capital city of Kazakhstan. Built in a neofuturist style, the architectural project was unveiled by the President of Kazakhstan Nursultan Nazarbayev on December 9, 2006.</h5>
+        <p class="w3-text-grey">Following the construction of the Palace of Peace and Reconciliation (opened in 2006), a glass pyramid, the Khan Shatyr Entertainment Center was the second national project in Nur-Sultan designed by UK architect Norman Foster (of Foster and Partners), (Partners in Charge Filo Russo and Peter Ridley), and UK engineers Buro Happold led by Mike Cook.[3] Construction documentation architects were Linea and Gultekin.[2] The construction of the tent-city was the responsibility of the Turkish company Sembol.</p>
+      </div>
+
+      <div class="w3-third w3-center">
+        <img src="http://static.dezeen.com/uploads/2010/07/dzn_Khan-Shatyr-Centre-by-Foster-+-Partners-1.jpg" style="width: 300px; height: 300px; margin: 50px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Grid -->
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <img src="https://www.designbuild-network.com/wp-content/uploads/sites/26/2017/10/2l-Image-Asthana-Expo.jpg" style="width: 300px; height: 300px; margin-right: 50px; margin-top:50px;">
+      </div>
+      <div class="w3-twothird" >
+        <h1>Expo Campus</h1>
+        <h5 class="w3-padding-32">Expo 2017 Astana was an International Exposition which took place from June 10 to September 10, 2017 in Nur-Sultan, Kazakhstan, which was called Astana at the time. The expo's theme was "Future Energy", and aimed to create a global debate between countries, nongovernmental organizations, companies and the general public on the crucial question: "How do we ensure safe and sustainable access to energy for all while reducing CO2 emissions?"</h5>
+        <p class="w3-text-grey">The theme chosen for the Expo 2017 was "Future Energy".[2] The theme was aimed to concentrate on the future of energy, and on innovative and practical energy solutions and their impacts.</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- First Grid -->
+  <div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>The Medeu</h1>
+        <h5 class="w3-padding-32">The Medeu (Kazakh: Медеу, Medeu), is an outdoor speed skating and bandy rink. It is located in a mountain valley (Medeu Valley, or the valley of Malaya Almatinka River) on the south-eastern outskirts of Almaty, Kazakhstan. Medeu sits 1,691 metres above sea level. It consists of 10.5 thousand square meters of ice and utilizes a sophisticated freezing and watering system to ensure the quality of the ice.</h5>
+        <p class="w3-text-grey">Medeu maintains its status as one of the best-known tourist locations in Kazakhstan. The stadium is open to the public all year round, allowing visitors to skate at high altitude day or night. During night hours, skaters can enjoy music and lights in the stadium either from the ice, or from VIP boxes available for rent.</p>
+      </div>
+
+      <div class="w3-third w3-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Medeobanen1.jpg/1024px-Medeobanen1.jpg" style="width: 300px; height: 300px; margin: 50px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Grid -->
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <img src="https://powdernomads.kz/wp-content/uploads/2020/12/Shymbulak-mountain-resort_1.jpg" style="width: 300px; height: 300px; margin-right: 50px; margin-top:50px;">
+      </div>
+      <div class="w3-twothird" >
+        <h1>Shymbulak</h1>
+        <h5 class="w3-padding-32">Shumbulak (Kazakh: Şymbūlaq, Cyrillic: Шымбұлақ), also known as Chimbulak (Russian: Чимбулак, Kyrgyz: Чымбулак) is a ski resort near Almaty. It is the largest ski resort in Central Asia. It is located in the upper part of the Medeu Valley in the Zailiisky Alatau mountain range, at an elevation of 2,200 metres (7,200 ft) above sea level. The resort area is about 25 kilometres (16 mi) south of Almaty city by Medeo road. It is popular for its mild climate, large quantity of sunny days and great amount of snow through the winter (from November till May).</h5>
+        <p class="w3-text-grey">There are three ski lifts, which cumulatively reach Talgar pass (3,200 metres [10,500 ft] above the sea level), the highest point of the ski resort. The total length of the lifts is 3,620 metres (11,880 ft). There are 3 stations of them; the first one is Intersection Station (2,260 metres [7,410 ft] above the sea level) (9 minute trip), then 20th Prop Station (2,630 metres [8,630 ft] above the sea level) (16.5 minutes) and Talgar pass Station (3,200 metres [10,500 ft] above the sea level). There is also Snow-Park for the fans of snowboarding.</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- First Grid -->
+  <div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>The First President's Park </h1>
+        <h5 class="w3-padding-32">First President's Park (Kazakh: Qazaqstan Respublikasynyŋ Tūŋğyş Prezidentı saiabağy) is an urban park located in Almaty at the intersection of Navoi Street and Al-Farabi Avenue in the Bostandyq District[1] in the south of the city.[2] The park was opened in July 2010, and was named after the first President of Kazakhstan Nursultan Nazarbayev.</h5>
+        <p class="w3-text-grey">In 2013 and 2014, repairs were carried out throughout the park.
+The fountain complex consists of five bowls located at different levels. The height of the central fountain is 30 meters. In the central part there is a sculpture of a crown with medallions of the signs of the "Zodiac".</p>
+      </div>
+
+      <div class="w3-third w3-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Bostandyk_District%2C_Almaty%2C_Kazakhstan_-_panoramio_-_Anton_Yefimov_%286%29.jpg/1024px-Bostandyk_District%2C_Almaty%2C_Kazakhstan_-_panoramio_-_Anton_Yefimov_%286%29.jpg" style="width: 300px; height: 300px; margin: 50px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Grid -->
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Aisha_bibi.png/1024px-Aisha_bibi.png" style="width: 300px; height: 300px; margin-right: 50px; margin-top:50px;">
+      </div>
+      <div class="w3-twothird" >
+        <h1>The Aisha Bibi</h1>
+        <h5 class="w3-padding-32">The Aisha-Bibi (Kazakh: Айша бибі) is an 11th or 12th-century mausoleum for a noble woman located in the village of Aisha Bibi, 18 km (11 mi) west of Taraz, Kazakhstan on the Silk Road. It is locally famous as a monument to love and faithfulness.</h5>>
+        <p class="w3-text-grey">The entire mausoleum is covered with terracotta panels which help to create the illusion of masslessness typical in Islamic architecture. The terracotta decoration also uses light and shadow rather than color, a pre-Mongol style. Functionally, this type of decoration scatters the light so the viewer is not blinded as he might be from a smooth light colored wall in full sun. The Columns on the corner are shaped after wooden columns used extensively in Soghdian pre-Islamic architecture. There is a band of calligraphy at the point of constriction in each column. In general they describe the beauty of Aisha Bibi and of love in general. One of the old distichs reads: "Autumn... Clouds... The Earth is beautiful".
+    </p>
+      </div>
+    </div>
+  </div>
+
+    <!-- First Grid -->
+  <div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>The Abay's Park</h1>
+        <h5 class="w3-padding-32">Abay Park, named after Abay Kunanbayuly, a famous 19th-century poet in Kazakhstan, is a cultural and recreational center in the city of Shymkent.</h5>
+        <p class="w3-text-grey">Sprawled across 52 hectares, the densely forested park has several nature trails and is a wonderful place for quiet walks. The park is also home to a large war memorial dedicated to the thousands of heroes who had sacrificed their lives during the Great Patriotic War (1941-1945).
+The park also hosts museums and fun activity centers for children and adults alike. There are several fast food shops and cafes too in the park where visitors can relax with food and drinks.</p>
+      </div>
+
+      <div class="w3-third w3-center">
+        <img src="https://travelazzi.com/wp-content/uploads/2019/09/image-1283.jpg" style="width: 300px; height: 300px; margin: 50px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Grid -->
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <img src="https://www.shymkent.info/wp-content/uploads/2020/02/IMG_20180831_140458-1024x758.jpg" style="width: 300px; height: 300px; margin-right: 50px; margin-top:50px;">
+      </div>
+      <div class="w3-twothird" >
+        <h1>The Shymkent Zoo</h1>
+        <h5 class="w3-padding-32">The Shymkent Zoo (Kazakh: Шымкент хайуанханасы, Shymkent haıýanhanasy; Russian: Шымкентский зоопарк) is the state zoo of the city Shymkent in Kazakhstan.[1] It is one of the largest and oldest zoological parks in the country. </h5>
+
+        <p class="w3-text-grey">From the total zoo's area of 54 hectares (130 acres), under an exposition 34 hectares (84 acres). The Shymkent Zoo contains more than 20 kinds of animals brought in the 'Red book'. 25% of requirements of forages for animals the zoo grow up on own earth, the area of 30 hectares (74 acres).
+</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <h1 class="w3-margin w3-xlarge">"In Kazakhstan, once you're someone's guest, it's really hard to get away - everyone wants you to stay. They believe that if you invite a guest, luck will fly into your house."</h1>
+  </div>
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <h1 class="w3-xxxlarge w3-text-red"><b>QAZAQ ELI. QAZAQ CITIES.</b></h1>
+ </div>
+
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+{% endblock %}

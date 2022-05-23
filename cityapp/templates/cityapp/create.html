@@ -3,12 +3,17 @@
 {% block title %}Registration Form{% endblock %}
 
 {% block content %}
-    <div class="features">
-        <h1>Registration Form</h1>
+<style>
+    .features{
+        color: #f44236;
+        margin-bottom: 90px;
+    }
+
+</style>
+    <div style="margin-left:420px;margin-right:40px"><h1 >Registration Form</h1></div>
 
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
-
             {{ form.name }}<br>
             {{ form.surname }}<br>
             {{ form.country }}<br>
@@ -19,6 +24,7 @@
             {{ form.email }}<br>
             {{ form.image }}<br>
             <span>{{ err }}</span>
+
 <!--            <input type = "text" placeholder="Name" class = "form-control"><br>-->
 <!--            <input type = "text" placeholder="Surname" class = "form-control"><br>-->
 <!--            <input type = "text" placeholder="Your Country" class = "form-control"><br>-->
@@ -26,13 +32,9 @@
 <!--            <input type = "text" placeholder="Desired Place" class = "form-control"><br>-->
 <!--            <input type = "date" placeholder="Date" class = "form-control"><br>-->
 <!--            <input type = "text" placeholder="Num of card" class = "form-control" maxlength="12"><br>-->
-            <button class="btn btn-success" type="submit">Registrate</button>
-
-
+           <button type="submit">Registrate</button>
 
         </form>
 
 
-
-    </div>
 {% endblock %}

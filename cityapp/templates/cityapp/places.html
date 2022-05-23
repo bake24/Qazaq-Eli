@@ -3,12 +3,11 @@
 {% block title %}Places{% endblock %}
 
 {% block content %}
-    <div class="features">
-        <h1>Interesting Places</h1>
+    <div class="features" style="margin-left: 340px; margin-right: 40px; padding: 10px;">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Interesting Places</b></h1>
         <p>You can Visit:</p>
-
         {% for el in place %}
-             <div class="alert alert-warning mt-2">
+             <div class="alert alert-secondary">
                 <h3>{{ el.cityname }}</h3>
                 <p>{{ el.place1 }}</p>
                 <p>{{ el.place2 }}</p>
@@ -16,5 +15,7 @@
             </div>
         {% endfor %}
 
-    </div>
+
+
+
 {% endblock %}

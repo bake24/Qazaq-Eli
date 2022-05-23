@@ -1,13 +1,17 @@
 {% extends 'cityapp/layout.html' %}
 {% load cityapp_tags %}
 
-{% block title %}ТОП-5{% endblock %}
+{% block title %}ТОП-4{% endblock %}
 
 {% block content %}
-    <div class="features">
-        <h1 style="font-size: 70px">Megapolices:</h1>
+    <div class="features" style="margin-left: 340px; margin-right: 40px; padding: 10px;">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Megapolices.</b></h1>
+        <h3 class="w3-xxxlarge w3-text-red">And Brief Information.</h3>
         <p>TOP-4</p>
-        {% show_categories 'title' cat_selected %}
-
+        <div>{% show_categories 'title' cat_selected %}</div>
     </div>
+
+        <a href="{% url 'history' %}" style="margin-left: 775px; margin-right: 40px; padding: 20px;">
+            <button style="border-color: red; margin-bottom: 20px;">About History</button>
+        </a>
 {% endblock %}

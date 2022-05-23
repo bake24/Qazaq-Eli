@@ -3,19 +3,26 @@
 {% block title %}Contacts{% endblock %}
 
 {% block content %}
+
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px;margin-left:340px;margin-right:40px"
     <div class="features">
-        <h1>Contacs</h1>
-        <p>Message Us</p>
+        <h1 class="w3-xxxlarge w3-text-red"><b>Contacts.</b></h1>
+        <p>Information About Visit Centers</p>
         {% for el in contact %}
 
-            <div class="alert alert-info mt-2">
+            <div class="alert alert-secondary" >
                 <h1>{{ el.name }}</h1>
-                <h1>{{ el.county }}</h1>
+                <h1>{{ el.country }}</h1>
                 <h4>{{ el.telnumber }}</h4>
             </div>
 
         {% endfor %}
-        <button class="btn btn-warning">TAP</button>
+        <a href="{% url 'create' %}"><button style="border-color: red; margin-bottom: 20px;">Visit Us</button></a>
 
     </div>
+
+
+  </div>
 {% endblock %}
+

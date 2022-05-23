@@ -17,6 +17,8 @@ urlpatterns = [
     path('famous', views.famous, name = 'famous'),
     path('<int:pk>', views.NewDetailView.as_view(), name = 'news-detail'),
     path('create', views.create, name = 'create'),
+    path('all_places', views.all_places, name = 'all_places'),
+    path('all_famous', views.all_famous, name = 'all_famous'),
 
     # path('<int:pk>/update', views.NewUpdateDetailView.as_view(), name = 'news-update')
 

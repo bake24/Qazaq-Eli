@@ -3,10 +3,101 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <div class="features">
-        <h1 style="font-size: 100px"><span style="color: red">Qazaq</span> Eli</h1>
-        <p></p>
-        <p style="margin-top: 50px; font-size:20px">Kazakhstan,[d] officially the Republic of Kazakhstan,[e] is a transcontinental country located mainly in Central Asia, and partly in Eastern Europe.[f] It borders Russia in the north and west, China in the east, and Kyrgyzstan, Uzbekistan, and Turkmenistan in the south. The capital is Nur-Sultan, formerly known as Astana. Almaty, Kazakhstan's largest city, was the country's previous capital until 1997. Kazakhstan is the world's largest landlocked country, the world's largest Muslim-majority country by land area (and the northernmost), and the ninth-largest country in the world. It has a population of 19 million, and one of the lowest population densities in the world, at fewer than 6 people per square kilometre (15 people per sq mi).</p>
-        <button class="btn btn-warning">More</button>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px;">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>QAZAQ ELI</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Your personal guide.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="https://w0.peakpx.com/wallpaper/613/891/HD-wallpaper-astana-kazakhstan-modern-architecture-astana-cities-kazakhstan.jpg" style="width: 100%" onclick="onClick(this)" alt="image1">
+      <img src="https://mykazakhstan.kz/wp-content/uploads/wealmaty.jpg" style="width: 100%" onclick="onClick(this)" alt="image2">
+      <img src="https://bptrip.ru/wp-content/uploads/2014/10/Big-Almaty-Lake-foto.jpg" style="width: 100%" onclick="onClick(this)" alt="image3">
     </div>
+
+    <div class="w3-half">
+      <img src="https://i.pinimg.com/736x/3d/75/73/3d7573841638baa0d41e17a2f08b29fe.jpg" style="width:100%" onclick="onClick(this)" alt="image4">
+      <img src="https://wallpapercave.com/wp/wp3640547.jpg" style="width:100%" onclick="onClick(this)" alt="image5">
+      <img src="https://c0.wallpaperflare.com/preview/660/5/131/kazakhstan-astana-islam-muslim.jpg" style="width:100%" onclick="onClick(this)" alt="image6">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Brief Information.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Kazakhstan - The Land of Wonders!</p>
+    <p>Kazakhstan is a unique region in the world because of its history, geographical position, and size. Being the world’s 9th largest country and located in the centre of Eurasia, it is also the largest landlocked country in the world. These factors have resulted in the country's particular climate and nature, which seem to absorb the brightest examples of the landscape of both continents. In addition, the complicated history of the Kazakh people and the constant interaction of nomadic lifestyle with settled people in South Kazakhstani ancient cities have led to Kazakhstan's unique and authentic culture.
+    </p>
+  </div>
+
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Where to go.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>How to start discovering</p>
+    <p>If you have never thought about travelling to Kazakhstan before, start exploring with and get inspired by the following articles.</p>
+    <p><b>The three main travel roads</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://www.centralasia-travel.com/uploads/gallery/1382/turkestan-kazakhstan-00.jpg" alt="Turkestan" style="width:100%">
+        <div class="w3-container">
+          <h3>Turkestan</h3>
+          <p class="w3-opacity">HOW TO GET TO TURKESTAN:</p>
+          <p>Turkestan was one of the most important commercial centers of the Silk Road. The city was founded over 15 centuries ago. Turkestan is about two hours away by mashrutka (minibus) from Shymkent.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://astanatimes.com/wp-content/uploads/2021/09/charyn_1.jpg" alt="Charyn Canyon" style="width:100%">
+        <div class="w3-container">
+          <h3>Charyn Canyon</h3>
+          <p class="w3-opacity">HOW TO GET TO CHARYN CANYON:</p>
+          <p>Charyn Canyon is part of the Charyn National Park and stretches 154km along the Charyn River, one of the deepest rivers of the Northern Tien Shan mountains. It’s a 4-hour trip from Almaty to Charyn Canyon.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Aktau_Light_house_Caspian_Sea.jpg" alt="Aktau" style="width:100%">
+        <div class="w3-container">
+          <h3>Aktau</h3>
+          <p class="w3-opacity">HOW TO GET TO AKTAU:</p>
+          <p>Aktau, located in the South West of Kazakhstan, was built in the 1960’s in the desert of Mangyshlak. You can reach Aktau by plane, by train, and by car. Most travelers end up here before or after crossing the Caspian Sea by boat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+
+          captionText.innerHTML = element.alt;
+        }
+    </script>
 {% endblock %}

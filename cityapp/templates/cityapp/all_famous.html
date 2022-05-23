@@ -1,0 +1,167 @@
+{% block content %}
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="{% url 'famous' %}" class="w3-bar-item w3-button w3-padding-large w3-white">RETURN</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="w3-container w3-red w3-center" style="padding:40px">
+    <h1 class="w3-margin w3-jumbo">FAMOUS PEOPLE OF KAZAKHSTAN</h1>
+  </header>
+
+      <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-twothird">
+          <h1>Ilyas Yesenberlin</h1>
+          <h5 class="w3-padding-32">Ilyas Yesenberlin was the great Kazakh writer and author of the historical trilogy "Nomads". He was born on January 10, 1915 in the town of Atbasar of Akmola region.</h5>
+          <p class="w3-text-grey">Ilyas paid a lot of attention to the study of history of the nation. He learned scientific monographs, visited archives and carefully studied primary sources. There was the continuous process of accumulation and processing of material for the first historical novel conceived by him. In 1965, in three months I. Yesenberlin wrote the first book from his well-known trilogy "Kakhar" and later the whole trilogy, given the name to it — "Nomads". Pain and anxiety for the Homeland — the feeling which promoted deep penetration of the writer into the historical past of the country. His son said: 'I saw authentic patriot in my father".</p>
+        </div>
+        <div class="w3-third w3-center">
+          <img src="https://e-history.kz/upload/iblock/206/206a2376447fd6d7f02d784152bbe09c.jpg" style="width: 300px; height: 300px; margin: 50px;">
+        </div>
+      </div>
+    </div>
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-third w3-center">
+          <img src="https://upload.wikimedia.org/wikipedia/en/a/af/Rakhimzhan_Qoshqarbaev-en.jpg" style="width: 300px; height: 300px; margin-right: 50px; margin-top:50px;">
+        </div>
+        <div class="w3-twothird" >
+          <h1>Rakhimzhan Qoshqarbaev</h1>
+          <h5 class="w3-padding-32">Rakhimzhan Qoshqarbaev (Kazakh: Рақымжан Қошқарбаев, Raqymjan Qoşqarbaev; Russian: Рахимжан Кошкарбаев) was the first soldier to raise the Soviet Flag at the Reichstag building in Berlin, having placed the flag by a staircase in the opera hall after sneaking into the building. </h5>
+          <p class="w3-text-grey">After nightfall Qoshqarbaev and several of his comrades raised the flag on the roof. However, because they had raised the flag in the night when it was too dark to take a photo, none of them were part of the iconic photo of Soviet soldiers raising the flag on 2 May. After the raising of the flag on 30 April it was shot down by German snipers shortly before the Wehrmacht retook control of the building. However, by 2 May the Soviets retook control of the building and raised the flag again, bringing photographer Yevgeny Khaldei with them to capture a reenactment of the historic moment.</p>
+        </div>
+      </div>
+    </div>
+      <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-twothird">
+          <h1>Ahmad Yasawi</h1>
+          <h5 class="w3-padding-32">Ahmad Yasawi (Kazakh: Қожа Ахмет Ясауи, romanized: Qoja Ahmet Yasawï, قوجا احمەت ياساۋٸ; Persian: خواجه اَحمدِ یَسوی, romanized: Khwāje Ahmad-e Yasavī; 1093–1166) was a Turkic[1] poet and Sufi, an early mystic who exerted a powerful influence on the development of Sufi orders throughout the Turkic-speaking world.[2] Yasawi is the earliest known Turkic poet who composed poetry in Middle Turkic.</h5>
+          <p class="w3-text-grey">He was a pioneer of popular mysticism, founded the first Turkic Sufi order, the Yasawiyya or Yeseviye, which very quickly spread over Turkic-speaking areas.[5] He was a Hanafi scholar like his murshid (spiritual guide), Yusuf Hamadani.
+</p>
+        </div>
+        <div class="w3-third w3-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Ahmad_Yasawi_miniature.png" style="width: 300px; height: 300px; margin: 50px;">
+        </div>
+      </div>
+    </div>
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-third w3-center">
+          <img src="https://e-history.kz/upload/iblock/1ed/1edf6daf993184d38459c4f06b3db19f.jpg" style="width: 300px; height: 300px; margin-right: 50px; margin-top:50px;">
+        </div>
+        <div class="w3-twothird" >
+          <h1>Kazybek Byi</h1>
+          <h5 class="w3-padding-32">He was born on the banks of the Syr Darya (the exact place of birth unknown), childhood and youth spent in the Tau and Ulytau belonged to the Middle zhuzu, to the genus of the tribe Karakesek Argyn. Keldibek father, grandfather Shanshar. Shanshara name was so well known and popular, that the maternal grandfather - Suleimen afar prikocheval Shansharu to whom for his erudition, wisdom called Abylai. </h5>>
+          <p class="w3-text-grey">Thanks to the family tradition of education Kazybek already in childhood showed eloquence and sharp mind, becoming a renowned bi of years. Kazybek bi actively participated in the affairs of government at the time of the Khans Tauke Samek, Abulmambeta, Abylair, contributed to the effectiveness of internal and external policies of the Kazakh khans. He became one of the organizers of the nationwide struggle against Jungar occupiers. Supporting the establishment of friendly relations with Russia, he also opposed the close connection with the Qin empire.</p>
+        </div>
+      </div>
+    </div>
+      <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-twothird">
+          <h1>Nurtas Adambay</h1>
+          <h5 class="w3-padding-32">Nurtas Adambay is a director and actor, known for Lift (2018), Akim (2019) and Village Escape. Love Affair (2015).</h5>
+          <p class="w3-text-grey">In 2012, Forbes magazine ranked the participants of the Nasha KZasha project in third place in the list of the richest representatives of show business in Kazakhstan.
+
+  Laureate of the award "People's Favorite - 2015".</p>
+        </div>
+        <div class="w3-third w3-center">
+          <img src="https://pbs.twimg.com/profile_images/719719213749800960/ZWZYXPHy_400x400.jpg" style="width: 300px; height: 300px; margin: 50px;">
+        </div>
+      </div>
+    </div>
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-third w3-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/%D0%9F%D1%80%D0%B8%D0%BB%D1%83%D1%87%D0%BD%D1%8B%D0%B9.jpg" style="width: 300px; height: 300px; margin-right: 50px; margin-top:50px;">
+        </div>
+        <div class="w3-twothird" >
+          <h1>Pavel Priluchny</h1>
+          <h5 class="w3-padding-32">Pavel Valerievich Priluchny (Russian: Павел Вале́рьевич Прилучный; born 5 November 1987) is a Kazakhstani-born Russian actor of theater and cinema, TV host, best known for his roles in the television series Silver Spoon and The Life and Adventures of Mishka Yaponchik</h5>
+          <p class="w3-text-grey">Pavel Priluchny was born in Chimkent, Chimkent Oblast, Kazakh SSR, Soviet Union (now Kazakhstan). His mother was a choreographer and his father a boxing trainer. Pavel spent his childhood and teenage years doing choreography and boxing. He studied at a theater school in Novosibirsk, and performed at the youth theater "Globus".</p>
+        </div>
+      </div>
+    </div>
+      <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-twothird">
+          <h1>Denis Yurievich Ten</h1>
+          <h5 class="w3-padding-32">Denis Yurievich Ten (Kazakh: Денис Юрийұлы Тен; Russian: Денис Юрьевич Тен; 13 June 1993 – 19 July 2018) was a Kazakhstani figure skater.[1] He was the 2014 Olympic bronze medalist, a two-time World medalist (silver in 2013, bronze in 2015), the 2015 Four Continents champion, the 2017 Winter Universiade champion, and a five-time national champion of Kazakhstan.
+</h5>
+          <p class="w3-text-grey">Ten was the first skater from Kazakhstan to stand on the podium at the World Championships, Four Continents Championships, Asian Winter Games, and the Olympic Games. At the 2008–09 ISU Junior Grand Prix event in Belarus, he became the first skater from Kazakhstan to win an International Skating Union competition. His other accomplishments include qualifying two spots for his country in the men's event at the 2010 and 2014 Winter Olympics.</p>
+        </div>
+        <div class="w3-third w3-center">
+          <img src="https://img.olympicchannel.com/images/image/private/t_1-1_600/f_auto/v1538355600/primary/ycltbwk8tptrzrxb5yso
+" style="width: 300px; height: 300px; margin: 50px;">
+        </div>
+      </div>
+    </div>
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-third w3-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Kudaibergen_at_New_Wave_in_2019.jpg/1024px-Kudaibergen_at_New_Wave_in_2019.jpg" style="width: 300px; height: 300px; margin-right: 50px; margin-top:50px;">
+        </div>
+        <div class="w3-twothird" >
+          <h1>Dinmukhammed Kanatuly Kudaibergen</h1>
+          <h5 class="w3-padding-32">Dinmukhammed Kanatuly Kudaibergen, born 24 May 1994, known professionally as Dimash Kudaibergen, is a Kazakh singer, songwriter, and multi-instrumentalist. He is university-trained in classical as well as contemporary music, and is known for his exceptionally wide vocal range. </h5>>
+          <p class="w3-text-grey">Although offered a position at the Astana Opera, he decided to carve out his career in contemporary music, mixing classical elements and traditional Kazakh music with pop music.</p>
+        </div>
+      </div>
+    </div>
+
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <h1 class="w3-xxxlarge w3-text-red"><b>QAZAQ ELI. QAZAQ CITIES.</b></h1>
+ </div>
+
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+{% endblock %}

@@ -11,33 +11,150 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'cityapp/css/style.css' %}">
     <script src="https://kit.fontawesome.com/be35ade309.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+<style>
+    body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+    body {
+    font-size:16px;}
+    .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+    .w3-half img:hover{opacity:1}
+
+
+    button {
+      align-items: center;
+      appearance: none;
+      background-color: #fff;
+      border-radius: 24px;
+      border-style: none;
+      box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+      box-sizing: border-box;
+      color: #3c4043;
+      cursor: pointer;
+      display: inline-flex;
+      fill: currentcolor;
+      font-family: "Google Sans",Roboto,Arial,sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      height: 48px;
+      justify-content: center;
+      letter-spacing: .25px;
+      line-height: normal;
+      max-width: 100%;
+      overflow: visible;
+      padding: 2px 24px;
+      position: relative;
+      text-align: center;
+      text-transform: none;
+      transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: auto;
+      will-change: transform,opacity;
+      z-index: 0;
+    }
+
+    button:hover {
+      background: rgba(244,66,54,20);
+      color: #FFF;
+    }
+
+    button:active {
+      box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+      outline: none;
+    }
+
+    button:focus {
+      outline: none;
+      border: 2px solid #4285f4;
+    }
+
+    button:not(:disabled) {
+      box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+    }
+
+    button:not(:disabled):hover {
+      box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+    }
+
+    button:not(:disabled):focus {
+      box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+    }
+
+    button:not(:disabled):active {
+      box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+    }
+
+    button:disabled {
+      box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+    }
+</style>
 <body>
-    <aside>
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+            <div class="w3-container">
+                <h3 class="w3-padding-64"><b>QAZAQ<br>CITIES</b></h3>
+            </div>
+        <div class="w3-bar-block">
+            <a href="{% url 'profile' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">PROFILE</a>
+            <a href="{% url 'main' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">HOME</a>
+            <a href="{% url 'city' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">CITIES</a>
+            <a href="{% url 'contacts' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">CONTACTS</a>
+            <a href="{% url 'places' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">PLACES</a>
+            <a href="{% url 'news' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">NEWS</a>
+            <a href="{% url 'famous' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">FAMOUS</a>
+            <a href="{% url 'create' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">REGISTRATION</a>
+        </div>
+    </nav>
 
-        <span class="logo">Qazaq Cities</span>
-        <a href="{% url 'profile' %}" ><button class="btn btn-info" style = "margin-top: 20px"><i class="fa-solid fa-address-card"></i>Profile</button></a>
-        <h3>Sections</h3>
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+      <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+      <span>QAZAQ ELI</span>
+    </header>
 
-        <ul>
-            <a href="{% url 'main' %}"><li><i class="fa-solid fa-house"></i>Home</li></a>
-            <a href="{% url 'city' %}"><li><i class="fa-solid fa-city"></i>Cities</li></a>
-            <a href="{% url 'contacts' %}"><li><i class="fa-solid fa-paper-plane"></i>Contacts</li></a>
-            <a href="{% url 'places' %}"><li><i class="fa-solid fa-location-dot"></i></i>Places</li></a>
-            <a href="{% url 'news' %}"><li><i class="fa-solid fa-newspaper"></i>News</li></a>
-            <a href="{% url 'history' %}"><li><i class="fa-solid fa-book"></i>History</li></a>
-            <a href="{% url 'famous' %}"><li><i class="fa-solid fa-star"></i>Famous</li></a>
-            <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Registration</button></li></a>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-
-        </ul>
-
-    </aside>
     <main>
         {% block content %}
         {% endblock %}
     </main>
 
+<footer class="w3-container w3-padding-64 w3-center w3-opacity" style="margin-left: 375px; margin-right: 40px;">
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <h1 class="w3-xxxlarge w3-text-red"><b>QAZAQ ELI. QAZAQ CITIES.</b></h1>
+ </div>
+
+</footer>
 
 </body>
+<script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+
+</script>
 </html>

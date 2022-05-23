@@ -172,6 +172,14 @@ def  create(request):
 
     return render(request, 'cityapp/create.html', data)
 
+def  all_places(request):
+    # news_info = Place.objects.all()
+    return render(request, 'cityapp/all_places.html')
+
+
+def  all_famous(request):
+    # news_info = Place.objects.all()
+    return render(request, 'cityapp/all_famous.html')
 
 
 

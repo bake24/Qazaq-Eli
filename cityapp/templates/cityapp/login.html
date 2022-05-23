@@ -1,17 +1,136 @@
+
 {%  block content %}
+<style>
+    body{
+        display: inblock-flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%
+        width: 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1619265180726-6c11823ebf6a?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: center;
+        font-family: 'Nunito', sans-serif;
+    }
+    .container{
+        max-width: 550px;
+        margin: auto;
+    }
+    .header-bar{
+        margin: 6% auto 0;
+        width: 380px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        border-radius: 5px 5px 0 0;
+        background: linear-gradient(90deg, #f44236 0%, #f34136 43%, #f34236 100%);
+    }
+    .card-body-wrapper{
+        width: 380px;
+        height: 180px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        border-top: 1px solid rgb(226, 226, 226);
+        border-radius: 0 0 5px 5px;
+        gap: 1rem;
+    }
 
-<div class="header-bar">
-    <h1>Login</h1>
-</div>
+    .button{
+      align-items: center;
+      appearance: none;
+      background-color: #fff;
+      border-radius: 6px;
+      border-style: none;
+      box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+      box-sizing: border-box;
+      color: #3c4043;
+      cursor: pointer;
+      display: inline-flex;
+      fill: currentcolor;
+      font-family: "Google Sans",Roboto,Arial,sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      height: 36px;
+      justify-content: center;
+      letter-spacing: .25px;
+      line-height: normal;
+      max-width: 100%;
+      overflow: visible;
+      padding: 2px 24px;
+      position: relative;
+      text-align: center;
+      text-transform: none;
+      transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: auto;
+      will-change: transform,opacity;
+      z-index: 0;
+    }
+
+    .button:hover {
+      background: #F6F9FE;
+      color: #4F576D;
+    }
+
+    .button:active {
+      box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+      outline: none;
+    }
+
+    .button:focus {
+      outline: none;
+      border: 2px solid #4285f4;
+    }
+
+    .button:not(:disabled) {
+      box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+    }
+
+    .button:not(:disabled):hover {
+      box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+    }
+
+    .button:not(:disabled):focus {
+      box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+    }
+
+    .button:not(:disabled):active {
+      box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+    }
+
+    .button:disabled {
+      box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+    }
+
+</style>
 
 
-<div class="card-body">
-    <form method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input class="button" type="submit" value="Login">
-        <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
-    </form>
-</div>
+
+<body>
+        <div class="header-bar">
+            <div class="container">
+                <div class="header-bar-wrapper"><h1>Login</h1></div>
+            </div>
+        </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="card-body-wrapper">
+
+                <form method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <input class="button" type="submit" value="Login">
+                    <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
 
 {% endblock content %}
